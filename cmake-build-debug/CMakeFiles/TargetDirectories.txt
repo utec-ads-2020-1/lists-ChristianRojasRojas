@@ -1,0 +1,3 @@
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/cmake-build-debug/CMakeFiles/lists-ChristianRojasRojas.dir
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/main.cpp
+iostream
+-
+structures/queue.h
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/queue.h
+structures/lists/forward.h
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/forward.h
+
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/forward.h
+list.h
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/list.h
+iterators/forward_iterator.h
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/iterators/forward_iterator.h
+
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/iterators/forward_iterator.h
+../node.h
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/node.h
+
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/list.h
+node.h
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/node.h
+
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/node.h
+iostream
+-
+
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/queue.h
+

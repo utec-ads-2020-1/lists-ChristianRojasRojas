@@ -23,6 +23,10 @@ public:
 
 	int size();
 	bool empty();
+
+	void imprimir(){
+	    cout << "si esta dando" << endl;
+	}
 };
 
 #endif

@@ -23,6 +23,10 @@ class ForwardList : public List<T> {
         void sort();
         void reverse();
 
+        void imprimir(){
+            std::cout << "forward esta dando" << std::endl;
+        }
+
         ForwardIterator<T> begin();
 	    ForwardIterator<T> end();
 
