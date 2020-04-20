@@ -24,6 +24,11 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures"/>
+					<Add directory="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists"/>
+					<Add directory="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/iterators"/>
+					<Add directory="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/mock"/>
+					<Add directory="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/test"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -45,6 +50,11 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures"/>
+					<Add directory="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists"/>
+					<Add directory="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/iterators"/>
+					<Add directory="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/mock"/>
+					<Add directory="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/test"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -93,6 +103,12 @@
 			<Option target="lists-ChristianRojasRojas"/>
 		</Unit>
 		<Unit filename="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/forward.h">
+			<Option target="lists-ChristianRojasRojas"/>
+		</Unit>
+		<Unit filename="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/iterators/bidirectional_iterator.h">
+			<Option target="lists-ChristianRojasRojas"/>
+		</Unit>
+		<Unit filename="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/iterators/forward_iterator.h">
 			<Option target="lists-ChristianRojasRojas"/>
 		</Unit>
 		<Unit filename="D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/linked.h">

@@ -57,6 +57,7 @@ include CMakeFiles/lists-ChristianRojasRojas.dir/progress.make
 include CMakeFiles/lists-ChristianRojasRojas.dir/flags.make
 
 CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: CMakeFiles/lists-ChristianRojasRojas.dir/flags.make
+CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: CMakeFiles/lists-ChristianRojasRojas.dir/includes_CXX.rsp
 CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\chris\universidad\ciclo 5\algoritmos\tarea lista1\lists-ChristianRojasRojas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lists-ChristianRojasRojas.dir\main.cpp.obj -c "D:\chris\universidad\ciclo 5\algoritmos\tarea lista1\lists-ChristianRojasRojas\main.cpp"
@@ -70,6 +71,7 @@ CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.s: cmake_force
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\chris\universidad\ciclo 5\algoritmos\tarea lista1\lists-ChristianRojasRojas\main.cpp" -o CMakeFiles\lists-ChristianRojasRojas.dir\main.cpp.s
 
 CMakeFiles/lists-ChristianRojasRojas.dir/mock/mocker.cpp.obj: CMakeFiles/lists-ChristianRojasRojas.dir/flags.make
+CMakeFiles/lists-ChristianRojasRojas.dir/mock/mocker.cpp.obj: CMakeFiles/lists-ChristianRojasRojas.dir/includes_CXX.rsp
 CMakeFiles/lists-ChristianRojasRojas.dir/mock/mocker.cpp.obj: ../mock/mocker.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\chris\universidad\ciclo 5\algoritmos\tarea lista1\lists-ChristianRojasRojas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lists-ChristianRojasRojas.dir/mock/mocker.cpp.obj"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lists-ChristianRojasRojas.dir\mock\mocker.cpp.obj -c "D:\chris\universidad\ciclo 5\algoritmos\tarea lista1\lists-ChristianRojasRojas\mock\mocker.cpp"

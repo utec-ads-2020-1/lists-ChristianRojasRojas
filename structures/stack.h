@@ -8,7 +8,7 @@ using namespace std;
 
 // TODO: Implement all methods
 template <typename T>
-class stack {
+class stack{
     T* data;
     int top;
     int capacity;
@@ -24,5 +24,41 @@ public:
     int size();
     bool empty();
 };
+
+
+template <typename T>
+stack<T>::stack() {
+
+}
+
+template <typename T>
+void stack<T>::push(T) {
+
+}
+
+template <typename T>
+void stack<T>::pop() {
+
+}
+
+template <typename T>
+T stack<T>::peak() {
+
+}
+
+template <typename T>
+int stack<T>::size() {
+
+}
+
+template <typename T>
+bool stack<T>::empty() {
+
+}
+
+template <typename T>
+stack<T>::~stack() {
+    delete this->data;
+}
 
 #endif

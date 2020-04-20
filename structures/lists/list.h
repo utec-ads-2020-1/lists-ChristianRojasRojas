@@ -30,4 +30,11 @@ class List {
         virtual string name() = 0;
 };
 
+
+
+/*template <typename T>
+List<T>::~List() {
+    delete this->head;
+    delete this->tail;
+}*/
 #endif
