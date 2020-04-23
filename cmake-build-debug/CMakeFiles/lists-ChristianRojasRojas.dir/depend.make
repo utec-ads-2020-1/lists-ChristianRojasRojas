@@ -3,7 +3,9 @@
 
 CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/lists/forward.h
+CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/lists/iterators/bidirectional_iterator.h
 CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/lists/iterators/forward_iterator.h
+CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/lists/linked.h
 CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/lists/list.h
 CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/lists/node.h
 CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/queue.h

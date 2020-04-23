@@ -52,7 +52,7 @@ T ForwardList<T>::front(){
         return this->head->data;
     }
     else{
-        cout << "esta vacio -> trow excep" << endl;
+        throw "this list is empty, can't give back (front) any data";
     }
 }
 
@@ -62,7 +62,7 @@ T ForwardList<T>::back() {
         return this->tail->data;
     }
     else{
-        cout << "esta vacio -> trow excep" << endl;
+        throw "this list is empty, can't give back (back) some data";
     }
 }
 
@@ -105,7 +105,7 @@ void ForwardList<T>::push_back(T data){
 template <typename T>
 void ForwardList<T>::pop_front(){
     if(empty()){
-        cout << "esta vacio nada que borrar -> excep" << endl;
+        throw "this list is empty, can't delete front";
     }
     else{
         Node<T>* temp;
@@ -120,7 +120,7 @@ void ForwardList<T>::pop_front(){
 template <typename T>
 void ForwardList<T>::pop_back(){
     if(empty()){
-        cout << "esta vacio nada que borrar -> excep" << endl;
+        throw "this list is empty, can't delete back";
     }
     else{
         Node<T>* temp = this->tail;
@@ -134,8 +134,7 @@ void ForwardList<T>::pop_back(){
 template <typename T>
 T ForwardList<T>::operator[](int position){
     if(position >= this->nodes || position < 0){
-        cout << "error -> excep" << endl;
-        return this->head->data; // hasta implementar except
+        throw "invalid position in position search data";
     }
     else{
         Node<T>* temp = nodeNum(position);
@@ -159,7 +158,7 @@ int ForwardList<T>::size(){
 }
 
 template <typename T>
-void ForwardList<T>::clear(){
+void ForwardList<T>::clear(){ //falta solucionar el clear -> tengo que solucionar el node->keillself();
     while(this->head->next!=nullptr){
         Node<T>* temp = this->head;
         this->head = this->head->next;
@@ -170,6 +169,7 @@ void ForwardList<T>::clear(){
     this->tail->killSelf();
     delete this->head;
     delete this->tail;
+    this->nodes=0;
 }
 
 template <typename T>
@@ -180,7 +180,7 @@ void ForwardList<T>::sort(){
 template <typename T>
 void ForwardList<T>::reverse(){
     if(empty()){
-        cout << "excep vacio" << endl;
+        throw "this list is empty, can't reverse this list";
     }
     else {
         Node<T>* temp = this->tail;
@@ -200,8 +200,7 @@ void ForwardList<T>::reverse(){
 template <typename T>
 Node<T>* ForwardList<T>::nodeNum(int position) {
     if (position >= this->nodes || position < 0){
-        cout << "except --" << position << endl;
-        return this->head;
+        throw "invalid position in search position";
     }else{
         Node<T>* temp = this->head;
         for (int i=0; i<position;i++){
