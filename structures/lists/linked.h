@@ -113,7 +113,7 @@ void LinkedList<T>::pop_front(){
         Node<T>* temp;
         temp = this->head;
         this->head = this->head->next;
-        //temp->killSelf();
+        temp->killSelf();
         delete temp;
         this->nodes--;
     }
@@ -127,6 +127,7 @@ void LinkedList<T>::pop_back(){
     else{
         Node<T>* temp = this->tail;
         this->tail = this->tail->prev;
+        temp->killSelf();
         delete temp;
         this->nodes--;
     }
@@ -165,12 +166,12 @@ void LinkedList<T>::clear(){ //falta solucionar el clear -> tengo que solucionar
         this->head = this->head->next;
         temp->killSelf();
         delete temp;
+        this->nodes--;
     }
     this->head->killSelf();
     this->tail->killSelf();
     delete this->head;
-    delete this->tail;
-    this->nodes=0;
+    this->nodes--;
 }
 
 template <typename T>
@@ -185,14 +186,20 @@ void LinkedList<T>::reverse(){
     }
     else {
         Node<T>* temp = this->tail;
-        for (int i = this->nodes - 1; i > 0; i--) {
-            temp->next = nodeNum(i - 1);
+        Node<T>* temp2 = this->tail;
+        Node<T>* tempBack = this->tail->prev;
+        this->tail = this->head;
+        this->head = temp;
+        this->head->next = this->head->prev;
+        while(temp!=this->tail){
+            temp->next = tempBack;
             temp = temp->next;
+            tempBack = tempBack->prev;
+            temp->prev = temp2;
+            temp2 = temp2->next;
         }
-        temp = this->head;
-        this->head = this->tail;
-        this->tail = temp;
         this->tail->next = nullptr;
+        this->head->prev = nullptr;
     }
 }
 

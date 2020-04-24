@@ -111,7 +111,7 @@ void ForwardList<T>::pop_front(){
         Node<T>* temp;
         temp = this->head;
         this->head = this->head->next;
-        //temp->killSelf();
+        temp->killSelf();
         delete temp;
         this->nodes--;
     }
@@ -125,7 +125,7 @@ void ForwardList<T>::pop_back(){
     else{
         Node<T>* temp = this->tail;
         this->tail = nodeNum(this->nodes-2);
-        //temp->killSelf();
+        temp->killSelf();
         delete temp;
         this->nodes--;
     }
@@ -164,12 +164,12 @@ void ForwardList<T>::clear(){ //falta solucionar el clear -> tengo que soluciona
         this->head = this->head->next;
         temp->killSelf();
         delete temp;
+        this->nodes--;
     }
     this->head->killSelf();
     this->tail->killSelf();
     delete this->head;
-    delete this->tail;
-    this->nodes=0;
+    this->nodes--;
 }
 
 template <typename T>

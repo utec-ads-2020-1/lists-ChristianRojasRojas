@@ -14,8 +14,8 @@ struct Node {
 
 template <typename T>
 void Node<T>::killSelf() {
-    delete this->next;
-    delete this->prev;
+    this->next = nullptr;
+    this->prev = nullptr;
 }
 
 #endif
