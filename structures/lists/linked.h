@@ -225,7 +225,7 @@ void LinkedList<T>::reverse(){
 template <typename T>
 void LinkedList<T>::merge(LinkedList<T>& addList) {
     if (empty() && addList.empty()){
-        throw "both list empty";
+        cout <<  "both list empty" << endl;
     }
     else if (empty()){
         this->head = addList.head;

@@ -233,7 +233,7 @@ void CircularLinkedList<T>::reverse(){
 template <typename T>
 void CircularLinkedList<T>::merge(CircularLinkedList<T>& addList) {
     if (empty() && addList.empty()){
-        throw "both list empty";
+        cout <<  "both list empty" << endl;
     }
     else if (empty()){
         this->head = addList.head;
