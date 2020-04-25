@@ -108,7 +108,7 @@ void LinkedList<T>::push_back(T data){
 template <typename T>
 void LinkedList<T>::pop_front(){
     if(empty()){
-        throw "this list is empty, cannot delete front";
+        cout << "this list is empty, cannot delete front" << endl;
     }
     else{
         Node<T>* temp;
@@ -124,7 +124,7 @@ void LinkedList<T>::pop_front(){
 template <typename T>
 void LinkedList<T>::pop_back(){
     if(empty()){
-        throw "this list is empty, cannot delete back";
+        cout << "this list is empty, cannot delete back" << endl;
     }
     else{
         Node<T>* temp = this->tail;
@@ -180,7 +180,7 @@ void LinkedList<T>::clear(){
 template <typename T>
 void LinkedList<T>::sort(){
     if(empty()){
-        throw "this list is empty, cannot be sort";
+        cout << "this list is empty, cannot be sort" << endl;
     }
     else{
         Node<T>* temp = this->head;
@@ -201,7 +201,7 @@ void LinkedList<T>::sort(){
 template <typename T>
 void LinkedList<T>::reverse(){
     if(empty()){
-        throw "this list is empty, cannot reverse this list";
+        cout << "this list is empty, cannot reverse this list" << endl;
     }
     else {
         Node<T>* temp = this->tail;

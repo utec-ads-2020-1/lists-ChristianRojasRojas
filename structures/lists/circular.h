@@ -114,7 +114,7 @@ void CircularLinkedList<T>::push_back(T data){
 template <typename T>
 void CircularLinkedList<T>::pop_front(){
     if(empty()){
-        throw "this list is empty, cannot delete front";
+        cout << "this list is empty, cannot delete front" << endl;
     }
     else{
         Node<T>* temp;
@@ -131,7 +131,7 @@ void CircularLinkedList<T>::pop_front(){
 template <typename T>
 void CircularLinkedList<T>::pop_back(){
     if(empty()){
-        throw "this list is empty, cannot delete back";
+        cout << "this list is empty, cannot delete back" << endl;
     }
     else{
         Node<T>* temp = this->tail;
@@ -188,7 +188,7 @@ void CircularLinkedList<T>::clear(){
 template <typename T>
 void CircularLinkedList<T>::sort(){
     if(empty()){
-        throw "this list is empty, cannot be sort";
+        cout << "this list is empty, cannot be sort" << endl;
     }
     else{
         Node<T>* temp = this->head;
@@ -209,7 +209,7 @@ void CircularLinkedList<T>::sort(){
 template <typename T>
 void CircularLinkedList<T>::reverse(){
     if(empty()){
-        throw "this list is empty, cannot reverse this list";
+        cout << "this list is empty, cannot reverse this list" << endl;
     }
     else {
         Node<T>* temp = this->tail;

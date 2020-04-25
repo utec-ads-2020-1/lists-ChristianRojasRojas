@@ -106,7 +106,7 @@ void ForwardList<T>::push_back(T data){
 template <typename T>
 void ForwardList<T>::pop_front(){
     if(empty()){
-        throw "this list is empty, cannot delete front";
+        cout << "this list is empty, cannot delete front" << endl;
     }
     else{
         Node<T>* temp;
@@ -121,7 +121,7 @@ void ForwardList<T>::pop_front(){
 template <typename T>
 void ForwardList<T>::pop_back(){
     if(empty()){
-        throw "this list is empty, cannot delete back";
+        cout << "this list is empty, cannot delete back" << endl;
     }
     else{
         Node<T>* temp = this->tail;
@@ -176,7 +176,7 @@ void ForwardList<T>::clear(){
 template <typename T>
 void ForwardList<T>::sort(){
     if(empty()){
-        throw "this list is empty, cannot be sort";
+        cout << "this list is empty, cannot be sort" << endl;
     }
     else{
         Node<T>* temp = this->head;
@@ -197,7 +197,7 @@ void ForwardList<T>::sort(){
 template <typename T>
 void ForwardList<T>::reverse(){
     if(empty()){
-        throw "this list is empty, cannot reverse this list";
+        cout << "this list is empty, cannot reverse this list" << endl;
     }
     else {
         Node<T>* temp = this->tail;
