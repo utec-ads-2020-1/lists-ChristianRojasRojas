@@ -12,6 +12,7 @@ class ForwardList : public List<T> {
         Node<T>* nodeNum(int);
     public:
         ForwardList() : List<T>() {}
+        ~ForwardList();
 
         T front();
         T back();
@@ -146,12 +147,7 @@ T ForwardList<T>::operator[](int position){
 
 template <typename T>
 bool ForwardList<T>::empty(){
-    if(this->head==nullptr){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return this->head==nullptr;
 }
 
 template <typename T>
@@ -256,4 +252,8 @@ void ForwardList<T>::imprimir() {
     cout << endl;
 }
 
+template <typename T>
+ForwardList<T>::~ForwardList(){
+    clear();
+}
 #endif

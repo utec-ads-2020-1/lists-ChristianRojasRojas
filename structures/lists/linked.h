@@ -12,7 +12,7 @@ class LinkedList : public List<T> {
         Node<T>* nodeNum(int);
     public:
         LinkedList() : List<T>() {}
-
+        ~LinkedList();
         T front();
         T back();
         void push_front(T);
@@ -149,12 +149,7 @@ T LinkedList<T>::operator[](int position){
 
 template <typename T>
 bool LinkedList<T>::empty(){
-    if(this->head==nullptr){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return this->head==nullptr;
 }
 
 template <typename T>
@@ -277,5 +272,10 @@ void LinkedList<T>::imprimir() {
         temp = temp->next;
     }
     cout << endl;
+}
+
+template <typename T>
+LinkedList<T>::~LinkedList(){
+    clear();
 }
 #endif

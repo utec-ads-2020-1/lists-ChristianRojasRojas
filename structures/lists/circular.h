@@ -12,6 +12,7 @@ class CircularLinkedList : public List<T> {
         Node<T>* nodeNum(int);
     public:
         CircularLinkedList() : List<T>() {}
+        ~CircularLinkedList();
 
         T front();
         T back();
@@ -157,12 +158,7 @@ T CircularLinkedList<T>::operator[](int position){
 
 template <typename T>
 bool CircularLinkedList<T>::empty(){
-    if(this->head==nullptr){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return this->head==nullptr;
 }
 
 template <typename T>
@@ -288,4 +284,9 @@ void CircularLinkedList<T>::imprimir() {
     cout << endl;
 }
 
+
+template <typename T>
+CircularLinkedList<T>::~CircularLinkedList(){
+    clear();
+}
 #endif
