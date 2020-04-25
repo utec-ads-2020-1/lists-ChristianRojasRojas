@@ -25,6 +25,7 @@ class LinkedList : public List<T> {
         void clear();
         void sort();
         void reverse();
+        void imprimir();
 
         BidirectionalIterator<T> begin();
 	    BidirectionalIterator<T> end();
@@ -52,7 +53,7 @@ T LinkedList<T>::front(){
         return this->head->data;
     }
     else{
-        throw "this list is empty, can't give back (front) any data";
+        throw "this list is empty, cannot give back (front) any data";
     }
 }
 
@@ -62,7 +63,7 @@ T LinkedList<T>::back(){
         return this->tail->data;
     }
     else{
-        throw "this list is empty, can't give back (back) any data";
+        throw "this list is empty, cannot give back (back) any data";
     }
 }
 
@@ -107,12 +108,13 @@ void LinkedList<T>::push_back(T data){
 template <typename T>
 void LinkedList<T>::pop_front(){
     if(empty()){
-        throw "this list is empty, can't delete front";
+        throw "this list is empty, cannot delete front";
     }
     else{
         Node<T>* temp;
         temp = this->head;
         this->head = this->head->next;
+        this->head->prev = nullptr;
         temp->killSelf();
         delete temp;
         this->nodes--;
@@ -122,11 +124,12 @@ void LinkedList<T>::pop_front(){
 template <typename T>
 void LinkedList<T>::pop_back(){
     if(empty()){
-        throw "this list is empty, can't delete back";
+        throw "this list is empty, cannot delete back";
     }
     else{
         Node<T>* temp = this->tail;
         this->tail = this->tail->prev;
+        this->tail->next = nullptr;
         temp->killSelf();
         delete temp;
         this->nodes--;
@@ -160,7 +163,7 @@ int LinkedList<T>::size(){
 }
 
 template <typename T>
-void LinkedList<T>::clear(){ //falta solucionar el clear -> tengo que solucionar el node->keillself();
+void LinkedList<T>::clear(){
     while(this->head->next!=nullptr){
         Node<T>* temp = this->head;
         this->head = this->head->next;
@@ -176,13 +179,29 @@ void LinkedList<T>::clear(){ //falta solucionar el clear -> tengo que solucionar
 
 template <typename T>
 void LinkedList<T>::sort(){
-    //falta
+    if(empty()){
+        throw "this list is empty, cannot be sort";
+    }
+    else{
+        Node<T>* temp = this->head;
+        Node<T>* temp2 = this->head->next;
+        for (int i=0; i < this->nodes-1; i++){
+            while(temp2!=nullptr){
+                if(temp->data > temp2->data){
+                    swapData(temp->data,temp2->data);
+                }
+                temp2 = temp2->next;
+            }
+            temp = temp->next;
+            temp2 = temp->next;
+        }
+    }
 }
 
 template <typename T>
 void LinkedList<T>::reverse(){
     if(empty()){
-        throw "this list is empty, can't reverse this list";
+        throw "this list is empty, cannot reverse this list";
     }
     else {
         Node<T>* temp = this->tail;
@@ -203,6 +222,25 @@ void LinkedList<T>::reverse(){
     }
 }
 
+template <typename T>
+void LinkedList<T>::merge(LinkedList<T>& addList) {
+    if (empty() && addList.empty()){
+        throw "both list empty";
+    }
+    else if (empty()){
+        this->head = addList.head;
+        this->tail = addList.tail;
+    }
+    else if(addList.empty()){
+        cout << "nada por hacer lista de agregacion vacia" << endl;
+    }
+    else {
+        this->tail->next = addList.head;
+        addList.head->prev = this->tail;
+        this->tail = addList.tail;
+    }
+    this->nodes+=addList.size();
+}
 
 
 template <typename T>
@@ -229,5 +267,15 @@ Node<T>* LinkedList<T>::nodeNum(int position) {
             return temp;
         }
     }
+}
+
+template <typename T>
+void LinkedList<T>::imprimir() {
+    Node<T>* temp = this->head;
+    while(temp!=nullptr) {
+        cout << temp->data << "  ";
+        temp = temp->next;
+    }
+    cout << endl;
 }
 #endif

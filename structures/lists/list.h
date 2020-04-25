@@ -28,13 +28,13 @@ class List {
         virtual void sort() = 0;
         virtual void reverse() = 0;
         virtual string name() = 0;
+        virtual void imprimir() = 0;
 };
 
-
-
-/*template <typename T>
-List<T>::~List() {
-    delete this->head;
-    delete this->tail;
-}*/
+template <typename T>
+void swapData(T &dato1,T &dato2) {
+    T temp = dato1;
+    dato1 = dato2;
+    dato2 = temp;
+}
 #endif

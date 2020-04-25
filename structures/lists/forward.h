@@ -25,6 +25,7 @@ class ForwardList : public List<T> {
         void clear();
         void sort();
         void reverse();
+        void imprimir();
 
         ForwardIterator<T> begin();
 	    ForwardIterator<T> end();
@@ -52,7 +53,7 @@ T ForwardList<T>::front(){
         return this->head->data;
     }
     else{
-        throw "this list is empty, can't give back (front) any data";
+        throw "this list is empty, cannot give back (front) any data";
     }
 }
 
@@ -62,7 +63,7 @@ T ForwardList<T>::back() {
         return this->tail->data;
     }
     else{
-        throw "this list is empty, can't give back (back) some data";
+        throw "this list is empty, cannot give back (back) some data";
     }
 }
 
@@ -105,7 +106,7 @@ void ForwardList<T>::push_back(T data){
 template <typename T>
 void ForwardList<T>::pop_front(){
     if(empty()){
-        throw "this list is empty, can't delete front";
+        throw "this list is empty, cannot delete front";
     }
     else{
         Node<T>* temp;
@@ -120,11 +121,12 @@ void ForwardList<T>::pop_front(){
 template <typename T>
 void ForwardList<T>::pop_back(){
     if(empty()){
-        throw "this list is empty, can't delete back";
+        throw "this list is empty, cannot delete back";
     }
     else{
         Node<T>* temp = this->tail;
         this->tail = nodeNum(this->nodes-2);
+        this->tail->next = nullptr;
         temp->killSelf();
         delete temp;
         this->nodes--;
@@ -158,7 +160,7 @@ int ForwardList<T>::size(){
 }
 
 template <typename T>
-void ForwardList<T>::clear(){ //falta solucionar el clear -> tengo que solucionar el node->keillself();
+void ForwardList<T>::clear(){
     while(this->head->next!=nullptr){
         Node<T>* temp = this->head;
         this->head = this->head->next;
@@ -167,20 +169,35 @@ void ForwardList<T>::clear(){ //falta solucionar el clear -> tengo que soluciona
         this->nodes--;
     }
     this->head->killSelf();
-    this->tail->killSelf();
     delete this->head;
     this->nodes--;
 }
 
 template <typename T>
 void ForwardList<T>::sort(){
-    //quickSort
+    if(empty()){
+        throw "this list is empty, cannot be sort";
+    }
+    else{
+        Node<T>* temp = this->head;
+        Node<T>* temp2 = this->head->next;
+        for (int i=0; i < this->nodes-1; i++){
+            while(temp2!=nullptr){
+                if(temp->data > temp2->data){
+                    swapData(temp->data,temp2->data);
+                }
+                temp2 = temp2->next;
+            }
+            temp = temp->next;
+            temp2 = temp->next;
+        }
+    }
 }
 
 template <typename T>
 void ForwardList<T>::reverse(){
     if(empty()){
-        throw "this list is empty, can't reverse this list";
+        throw "this list is empty, cannot reverse this list";
     }
     else {
         Node<T>* temp = this->tail;
@@ -193,6 +210,25 @@ void ForwardList<T>::reverse(){
         this->tail = temp;
         this->tail->next = nullptr;
     }
+}
+
+template <typename T>
+void ForwardList<T>::merge(ForwardList<T>& addList) {
+    if (empty() && addList.empty()){
+        throw "both list empty";
+    }
+    else if (empty()){
+        this->head = addList.head;
+        this->tail = addList.tail;
+    }
+    else if(addList.empty()){
+        cout << "nada por hacer lista de agregacion vacia" << endl;
+    }
+    else {
+        this->tail->next = addList.head;
+        this->tail = addList.tail;
+    }
+    this->nodes+=addList.size();
 }
 
 
@@ -208,6 +244,16 @@ Node<T>* ForwardList<T>::nodeNum(int position) {
         }
         return temp;
     }
+}
+
+template <typename T>
+void ForwardList<T>::imprimir() {
+    Node<T>* temp = this->head;
+    while(temp!=nullptr) {
+        cout << temp->data << "  ";
+        temp = temp->next;
+    }
+    cout << endl;
 }
 
 #endif
