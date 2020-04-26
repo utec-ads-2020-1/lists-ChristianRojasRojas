@@ -19,6 +19,10 @@ structures/lists/linked.h
 D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/linked.h
 structures/lists/circular.h
 D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/circular.h
+structures/lists/iterators/forward_iterator.h
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/iterators/forward_iterator.h
+structures/lists/iterators/bidirectional_iterator.h
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/iterators/bidirectional_iterator.h
 
 D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/lists/circular.h
 list.h
