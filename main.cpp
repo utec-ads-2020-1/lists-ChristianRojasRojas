@@ -5,6 +5,8 @@
 #include "structures/lists/forward.h"
 #include "structures/lists/linked.h"
 #include "structures/lists/circular.h"
+#include "structures/lists/iterators/forward_iterator.h"
+#include "structures/lists/iterators/bidirectional_iterator.h"
 
 using namespace std;
 
@@ -14,7 +16,7 @@ int main(int argc, char *argv[]) {
     cout << "===========================================================" << endl << endl;
 
     try{ //aqui se capturan las excepciones
-        
+
         /*List<int>* lista1 = new ForwardList<int>(); //FORWARDLIST PRUEBA-------------------------------
 
         lista1->push_front(1);
