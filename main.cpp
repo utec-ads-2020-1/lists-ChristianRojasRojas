@@ -1,5 +1,6 @@
 #include <iostream>
 //#include "test/tester.h"
+#include "structures/stack.h"
 #include "structures/queue.h"
 #include "structures/lists/forward.h"
 #include "structures/lists/linked.h"
@@ -13,7 +14,7 @@ int main(int argc, char *argv[]) {
     cout << "===========================================================" << endl << endl;
 
     try{ //aqui se capturan las excepciones
-
+        
         /*List<int>* lista1 = new ForwardList<int>(); //FORWARDLIST PRUEBA-------------------------------
 
         lista1->push_front(1);

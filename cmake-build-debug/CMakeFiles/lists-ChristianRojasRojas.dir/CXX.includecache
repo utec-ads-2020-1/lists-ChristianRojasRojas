@@ -9,6 +9,8 @@
 D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/main.cpp
 iostream
 -
+structures/stack.h
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/stack.h
 structures/queue.h
 D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/queue.h
 structures/lists/forward.h
@@ -55,4 +57,6 @@ iostream
 -
 
 D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/queue.h
+
+D:/chris/universidad/ciclo 5/algoritmos/tarea lista1/lists-ChristianRojasRojas/structures/stack.h
 

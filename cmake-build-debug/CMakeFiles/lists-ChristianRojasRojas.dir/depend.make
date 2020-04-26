@@ -10,6 +10,7 @@ CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/lists/linke
 CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/lists/list.h
 CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/lists/node.h
 CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/queue.h
+CMakeFiles/lists-ChristianRojasRojas.dir/main.cpp.obj: ../structures/stack.h
 
 CMakeFiles/lists-ChristianRojasRojas.dir/mock/mocker.cpp.obj: ../mock/mocker.cpp
 CMakeFiles/lists-ChristianRojasRojas.dir/mock/mocker.cpp.obj: ../mock/mocker.h
