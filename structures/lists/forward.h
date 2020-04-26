@@ -227,7 +227,27 @@ void ForwardList<T>::merge(ForwardList<T>& addList) {
     this->nodes+=addList.size();
 }
 
+template <typename T>
+ForwardIterator<T> ForwardList<T>::begin() {
+    if (empty()){
+        throw "list empty, cannot return any ptr (begin)";
+    }
+    else {
+        auto ptr = ForwardIterator<T>(this->head);
+        return ptr;
+    }
+}
 
+template <typename T>
+ForwardIterator<T> ForwardList<T>::end() {
+    if (empty()){
+        throw "list empty, cannot return any ptr (end)";
+    }
+    else {
+        auto ptr = ForwardIterator<T>(this->tail->next);
+        return ptr;
+    }
+}
 
 template <typename T>
 Node<T>* ForwardList<T>::nodeNum(int position) {

@@ -10,6 +10,7 @@ template <typename T>
 class LinkedList : public List<T> {
     private:
         Node<T>* nodeNum(int);
+        Node<T>* sentinel;
     public:
         LinkedList() : List<T>() {}
         ~LinkedList();
@@ -237,6 +238,35 @@ void LinkedList<T>::merge(LinkedList<T>& addList) {
     this->nodes+=addList.size();
 }
 
+template <typename T>
+BidirectionalIterator<T> LinkedList<T>::begin() {
+    if (empty()){
+        throw "list empty, cannot return any ptr (begin)";
+    }
+    else {
+        this->head->prev = this->sentinel;
+        this->sentinel->next = this->head;
+        this->sentinel->prev = this->tail;
+        this->tail->next = this->sentinel;
+        auto ptr = BidirectionalIterator<T>(this->sentinel->next); // o head
+        return ptr;
+    }
+}
+
+template <typename T>
+BidirectionalIterator<T> LinkedList<T>::end() {
+    if (empty()){
+        throw "list empty, cannot return any ptr (end)";
+    }
+    else {
+        this->head->prev = this->sentinel;
+        this->sentinel->next = this->head;
+        this->sentinel->prev = this->tail;
+        this->tail->next = this->sentinel;
+        auto ptr = BidirectionalIterator<T>(this->tail->next); // o sentinel
+        return ptr;
+    }
+}
 
 template <typename T>
 Node<T>* LinkedList<T>::nodeNum(int position) {
@@ -277,5 +307,7 @@ void LinkedList<T>::imprimir() {
 template <typename T>
 LinkedList<T>::~LinkedList(){
     clear();
+    this->sentinel->killSelf();
+    delete sentinel;
 }
 #endif

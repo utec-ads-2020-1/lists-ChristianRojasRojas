@@ -249,6 +249,36 @@ void CircularLinkedList<T>::merge(CircularLinkedList<T>& addList) {
 }
 
 template <typename T>
+BidirectionalIterator<T> CircularLinkedList<T>::begin() {
+    if (empty()){
+        throw "list empty, cannot return any ptr (begin)";
+    }
+    else {
+        this->head->prev = this->sentinel;
+        this->sentinel->next = this->head;
+        this->sentinel->prev = this->tail;
+        this->tail->next = this->sentinel;
+        auto ptr = BidirectionalIterator<T>(this->sentinel->next); // o head
+        return ptr;
+    }
+}
+
+template <typename T>
+BidirectionalIterator<T> CircularLinkedList<T>::end() {
+    if (empty()){
+        throw "list empty, cannot return any ptr (begin)";
+    }
+    else {
+        this->head->prev = this->sentinel;
+        this->sentinel->next = this->head;
+        this->sentinel->prev = this->tail;
+        this->tail->next = this->sentinel;
+        auto ptr = BidirectionalIterator<T>(this->tail->next); // o sentinel
+        return ptr;
+    }
+}
+
+template <typename T>
 Node<T>* CircularLinkedList<T>::nodeNum(int position) {
     if (position >= this->nodes || position < 0){
         throw "invalid position in search position";
