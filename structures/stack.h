@@ -76,7 +76,7 @@ bool stack<T>::empty() {
 
 template <typename T>
 stack<T>::~stack() {
-    delete this->data;
+    delete this->data; // delete []
 }
 
 #endif

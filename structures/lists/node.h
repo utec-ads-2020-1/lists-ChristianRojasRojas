@@ -16,6 +16,7 @@ template <typename T>
 void Node<T>::killSelf() {
     this->next = nullptr;
     this->prev = nullptr;
+    // No es la idea en si 
 }
 
 #endif

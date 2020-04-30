@@ -269,6 +269,7 @@ BidirectionalIterator<T> CircularLinkedList<T>::end() {
         throw "list empty, cannot return any ptr (begin)";
     }
     else {
+        //  Dónde está definido sentinel?
         this->head->prev = this->sentinel;
         this->sentinel->next = this->head;
         this->sentinel->prev = this->tail;

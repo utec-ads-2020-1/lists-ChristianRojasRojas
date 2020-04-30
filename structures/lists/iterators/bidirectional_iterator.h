@@ -14,30 +14,31 @@ class BidirectionalIterator {
             this->current = nullptr;
         };
 
-        BidirectionalIterator(Node<T>* ptr){
+        BidirectionalIterator(Node<T>* ptr){ // Intenta hacerlo explicit para ver problemas
             this->current = ptr;
         };
 
         BidirectionalIterator<T> operator=(BidirectionalIterator<T> other){
+            // Current es tipo Node y other es tipo iterator
             this->current = other;
-            return this->current;
+            return this->current; // Estás retornando nuevos iteradores
         };
 
         bool operator!=(BidirectionalIterator<T> other){
             return this->current!= other.current;
         };
 
-        BidirectionalIterator<T> operator++(){
+        BidirectionalIterator<T> operator++(){ // No verificas que current sea null
             this->current = this->current->next;
             return this->current;
         };
 
-        BidirectionalIterator<T> operator--(){
+        BidirectionalIterator<T> operator--(){ // No verificas que current sea null
             this->current = this->current->prev;
             return this->current;
         };
 
-        T operator*(){
+        T operator*(){ // No verificas que current sea null
             return this->current->data;
         };
 };

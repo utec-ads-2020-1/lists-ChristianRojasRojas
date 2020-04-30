@@ -248,7 +248,7 @@ BidirectionalIterator<T> LinkedList<T>::begin() {
         this->sentinel->next = this->head;
         this->sentinel->prev = this->tail;
         this->tail->next = this->sentinel;
-        auto ptr = BidirectionalIterator<T>(this->sentinel->next); // o head
+        auto ptr = BidirectionalIterator<T>(this->sentinel->next); // o head: Está bien
         return ptr;
     }
 }
@@ -263,7 +263,7 @@ BidirectionalIterator<T> LinkedList<T>::end() {
         this->sentinel->next = this->head;
         this->sentinel->prev = this->tail;
         this->tail->next = this->sentinel;
-        auto ptr = BidirectionalIterator<T>(this->tail->next); // o sentinel
+        auto ptr = BidirectionalIterator<T>(this->tail->next); // o sentinel: sentinel
         return ptr;
     }
 }
